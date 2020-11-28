@@ -1,0 +1,514 @@
+convolutional layer:
+filter = 48
+--------------------------------------------------
+DenseBlock 
+ DenseBlock(
+  (layers): ModuleList(
+    (0): DenseLayer(
+      (norm): BatchNorm2d(48, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv): Conv2d(48, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (drop): Dropout2d(p=0.2)
+    )
+    (1): DenseLayer(
+      (norm): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv): Conv2d(64, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (drop): Dropout2d(p=0.2)
+    )
+    (2): DenseLayer(
+      (norm): BatchNorm2d(80, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv): Conv2d(80, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (drop): Dropout2d(p=0.2)
+    )
+    (3): DenseLayer(
+      (norm): BatchNorm2d(96, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv): Conv2d(96, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (drop): Dropout2d(p=0.2)
+    )
+    (4): DenseLayer(
+      (norm): BatchNorm2d(112, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv): Conv2d(112, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (drop): Dropout2d(p=0.2)
+    )
+  )
+)
+--------------------------------------------------
+cur_channels_count: 128
+--------------------------------------------------
+skip_connection_channel_counts: [128]
+--------------------------------------------------
+transDownBlocks 
+ TransitionDown(
+  (norm): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (relu): ReLU(inplace)
+  (conv): Conv2d(128, 128, kernel_size=(1, 1), stride=(1, 1))
+  (drop): Dropout2d(p=0.2)
+  (maxpool): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+)
+--------------------------------------------------
+DenseBlock 
+ DenseBlock(
+  (layers): ModuleList(
+    (0): DenseLayer(
+      (norm): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv): Conv2d(128, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (drop): Dropout2d(p=0.2)
+    )
+    (1): DenseLayer(
+      (norm): BatchNorm2d(144, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv): Conv2d(144, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (drop): Dropout2d(p=0.2)
+    )
+    (2): DenseLayer(
+      (norm): BatchNorm2d(160, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv): Conv2d(160, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (drop): Dropout2d(p=0.2)
+    )
+    (3): DenseLayer(
+      (norm): BatchNorm2d(176, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv): Conv2d(176, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (drop): Dropout2d(p=0.2)
+    )
+    (4): DenseLayer(
+      (norm): BatchNorm2d(192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv): Conv2d(192, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (drop): Dropout2d(p=0.2)
+    )
+  )
+)
+--------------------------------------------------
+cur_channels_count: 208
+--------------------------------------------------
+skip_connection_channel_counts: [208, 128]
+--------------------------------------------------
+transDownBlocks 
+ TransitionDown(
+  (norm): BatchNorm2d(208, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (relu): ReLU(inplace)
+  (conv): Conv2d(208, 208, kernel_size=(1, 1), stride=(1, 1))
+  (drop): Dropout2d(p=0.2)
+  (maxpool): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+)
+--------------------------------------------------
+DenseBlock 
+ DenseBlock(
+  (layers): ModuleList(
+    (0): DenseLayer(
+      (norm): BatchNorm2d(208, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv): Conv2d(208, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (drop): Dropout2d(p=0.2)
+    )
+    (1): DenseLayer(
+      (norm): BatchNorm2d(224, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv): Conv2d(224, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (drop): Dropout2d(p=0.2)
+    )
+    (2): DenseLayer(
+      (norm): BatchNorm2d(240, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv): Conv2d(240, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (drop): Dropout2d(p=0.2)
+    )
+    (3): DenseLayer(
+      (norm): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv): Conv2d(256, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (drop): Dropout2d(p=0.2)
+    )
+    (4): DenseLayer(
+      (norm): BatchNorm2d(272, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv): Conv2d(272, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (drop): Dropout2d(p=0.2)
+    )
+  )
+)
+--------------------------------------------------
+cur_channels_count: 288
+--------------------------------------------------
+skip_connection_channel_counts: [288, 208, 128]
+--------------------------------------------------
+transDownBlocks 
+ TransitionDown(
+  (norm): BatchNorm2d(288, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (relu): ReLU(inplace)
+  (conv): Conv2d(288, 288, kernel_size=(1, 1), stride=(1, 1))
+  (drop): Dropout2d(p=0.2)
+  (maxpool): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+)
+--------------------------------------------------
+DenseBlock 
+ DenseBlock(
+  (layers): ModuleList(
+    (0): DenseLayer(
+      (norm): BatchNorm2d(288, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv): Conv2d(288, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (drop): Dropout2d(p=0.2)
+    )
+    (1): DenseLayer(
+      (norm): BatchNorm2d(304, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv): Conv2d(304, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (drop): Dropout2d(p=0.2)
+    )
+    (2): DenseLayer(
+      (norm): BatchNorm2d(320, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv): Conv2d(320, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (drop): Dropout2d(p=0.2)
+    )
+    (3): DenseLayer(
+      (norm): BatchNorm2d(336, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv): Conv2d(336, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (drop): Dropout2d(p=0.2)
+    )
+    (4): DenseLayer(
+      (norm): BatchNorm2d(352, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv): Conv2d(352, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (drop): Dropout2d(p=0.2)
+    )
+  )
+)
+--------------------------------------------------
+cur_channels_count: 368
+--------------------------------------------------
+skip_connection_channel_counts: [368, 288, 208, 128]
+--------------------------------------------------
+transDownBlocks 
+ TransitionDown(
+  (norm): BatchNorm2d(368, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (relu): ReLU(inplace)
+  (conv): Conv2d(368, 368, kernel_size=(1, 1), stride=(1, 1))
+  (drop): Dropout2d(p=0.2)
+  (maxpool): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+)
+--------------------------------------------------
+DenseBlock 
+ DenseBlock(
+  (layers): ModuleList(
+    (0): DenseLayer(
+      (norm): BatchNorm2d(368, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv): Conv2d(368, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (drop): Dropout2d(p=0.2)
+    )
+    (1): DenseLayer(
+      (norm): BatchNorm2d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv): Conv2d(384, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (drop): Dropout2d(p=0.2)
+    )
+    (2): DenseLayer(
+      (norm): BatchNorm2d(400, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv): Conv2d(400, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (drop): Dropout2d(p=0.2)
+    )
+    (3): DenseLayer(
+      (norm): BatchNorm2d(416, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv): Conv2d(416, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (drop): Dropout2d(p=0.2)
+    )
+    (4): DenseLayer(
+      (norm): BatchNorm2d(432, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv): Conv2d(432, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (drop): Dropout2d(p=0.2)
+    )
+  )
+)
+--------------------------------------------------
+cur_channels_count: 448
+--------------------------------------------------
+skip_connection_channel_counts: [448, 368, 288, 208, 128]
+--------------------------------------------------
+
+transDownBlocks 
+ TransitionDown(
+  (norm): BatchNorm2d(448, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (relu): ReLU(inplace)
+  (conv): Conv2d(448, 448, kernel_size=(1, 1), stride=(1, 1))
+  (drop): Dropout2d(p=0.2)
+  (maxpool): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+)
+--------------------------------------------------
+Bottleneck
+ DenseBlock(
+  (layers): ModuleList(
+    (0): DenseLayer(
+      (norm): BatchNorm2d(448, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv): Conv2d(448, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (drop): Dropout2d(p=0.2)
+    )
+    (1): DenseLayer(
+      (norm): BatchNorm2d(464, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv): Conv2d(464, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (drop): Dropout2d(p=0.2)
+    )
+    (2): DenseLayer(
+      (norm): BatchNorm2d(480, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv): Conv2d(480, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (drop): Dropout2d(p=0.2)
+    )
+    (3): DenseLayer(
+      (norm): BatchNorm2d(496, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv): Conv2d(496, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (drop): Dropout2d(p=0.2)
+    )
+    (4): DenseLayer(
+      (norm): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv): Conv2d(512, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (drop): Dropout2d(p=0.2)
+    )
+  )
+)
+
+
+prev_block_channels: 80
+cur_channels_count: 528
+--------------------------------------------------
+transUpBlocks 
+ TransitionUp(
+  (convTrans): ConvTranspose2d(80, 80, kernel_size=(3, 3), stride=(2, 2))
+)
+--------------------------------------------------
+cur_channels_count: 608
+--------------------------------------------------
+prev_block_channels: 80
+--------------------------------------------------
+denseBlocksUp 
+ DenseBlock(
+  (layers): ModuleList(
+    (0): DenseLayer(
+      (norm): BatchNorm2d(528, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv): Conv2d(528, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (drop): Dropout2d(p=0.2)
+    )
+    (1): DenseLayer(
+      (norm): BatchNorm2d(544, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv): Conv2d(544, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (drop): Dropout2d(p=0.2)
+    )
+    (2): DenseLayer(
+      (norm): BatchNorm2d(560, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv): Conv2d(560, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (drop): Dropout2d(p=0.2)
+    )
+    (3): DenseLayer(
+      (norm): BatchNorm2d(576, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv): Conv2d(576, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (drop): Dropout2d(p=0.2)
+    )
+    (4): DenseLayer(
+      (norm): BatchNorm2d(592, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv): Conv2d(592, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (drop): Dropout2d(p=0.2)
+    )
+  )
+)
+--------------------------------------------------
+transUpBlocks 
+ TransitionUp(
+  (convTrans): ConvTranspose2d(80, 80, kernel_size=(3, 3), stride=(2, 2))
+)
+--------------------------------------------------
+cur_channels_count: 528
+--------------------------------------------------
+prev_block_channels: 80
+--------------------------------------------------
+denseBlocksUp 
+ DenseBlock(
+  (layers): ModuleList(
+    (0): DenseLayer(
+      (norm): BatchNorm2d(448, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv): Conv2d(448, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (drop): Dropout2d(p=0.2)
+    )
+    (1): DenseLayer(
+      (norm): BatchNorm2d(464, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv): Conv2d(464, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (drop): Dropout2d(p=0.2)
+    )
+    (2): DenseLayer(
+      (norm): BatchNorm2d(480, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv): Conv2d(480, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (drop): Dropout2d(p=0.2)
+    )
+    (3): DenseLayer(
+      (norm): BatchNorm2d(496, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv): Conv2d(496, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (drop): Dropout2d(p=0.2)
+    )
+    (4): DenseLayer(
+      (norm): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv): Conv2d(512, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (drop): Dropout2d(p=0.2)
+    )
+  )
+)
+--------------------------------------------------
+transUpBlocks 
+ TransitionUp(
+  (convTrans): ConvTranspose2d(80, 80, kernel_size=(3, 3), stride=(2, 2))
+)
+--------------------------------------------------
+cur_channels_count: 448
+--------------------------------------------------
+prev_block_channels: 80
+--------------------------------------------------
+denseBlocksUp 
+ DenseBlock(
+  (layers): ModuleList(
+    (0): DenseLayer(
+      (norm): BatchNorm2d(368, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv): Conv2d(368, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (drop): Dropout2d(p=0.2)
+    )
+    (1): DenseLayer(
+      (norm): BatchNorm2d(384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv): Conv2d(384, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (drop): Dropout2d(p=0.2)
+    )
+    (2): DenseLayer(
+      (norm): BatchNorm2d(400, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv): Conv2d(400, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (drop): Dropout2d(p=0.2)
+    )
+    (3): DenseLayer(
+      (norm): BatchNorm2d(416, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv): Conv2d(416, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (drop): Dropout2d(p=0.2)
+    )
+    (4): DenseLayer(
+      (norm): BatchNorm2d(432, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv): Conv2d(432, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (drop): Dropout2d(p=0.2)
+    )
+  )
+)
+--------------------------------------------------
+transUpBlocks 
+ TransitionUp(
+  (convTrans): ConvTranspose2d(80, 80, kernel_size=(3, 3), stride=(2, 2))
+)
+--------------------------------------------------
+cur_channels_count: 368
+--------------------------------------------------
+prev_block_channels: 80
+--------------------------------------------------
+denseBlocksUp 
+ DenseBlock(
+  (layers): ModuleList(
+    (0): DenseLayer(
+      (norm): BatchNorm2d(288, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv): Conv2d(288, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (drop): Dropout2d(p=0.2)
+    )
+    (1): DenseLayer(
+      (norm): BatchNorm2d(304, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv): Conv2d(304, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (drop): Dropout2d(p=0.2)
+    )
+    (2): DenseLayer(
+      (norm): BatchNorm2d(320, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv): Conv2d(320, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (drop): Dropout2d(p=0.2)
+    )
+    (3): DenseLayer(
+      (norm): BatchNorm2d(336, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv): Conv2d(336, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (drop): Dropout2d(p=0.2)
+    )
+    (4): DenseLayer(
+      (norm): BatchNorm2d(352, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv): Conv2d(352, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (drop): Dropout2d(p=0.2)
+    )
+  )
+)
+--------------------------------------------------
+transUpBlocks 
+ TransitionUp(
+  (convTrans): ConvTranspose2d(80, 80, kernel_size=(3, 3), stride=(2, 2))
+)
+--------------------------------------------------
+denseBlocksUp 
+ DenseBlock(
+  (layers): ModuleList(
+    (0): DenseLayer(
+      (norm): BatchNorm2d(208, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv): Conv2d(208, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (drop): Dropout2d(p=0.2)
+    )
+    (1): DenseLayer(
+      (norm): BatchNorm2d(224, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv): Conv2d(224, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (drop): Dropout2d(p=0.2)
+    )
+    (2): DenseLayer(
+      (norm): BatchNorm2d(240, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv): Conv2d(240, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (drop): Dropout2d(p=0.2)
+    )
+    (3): DenseLayer(
+      (norm): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv): Conv2d(256, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (drop): Dropout2d(p=0.2)
+    )
+    (4): DenseLayer(
+      (norm): BatchNorm2d(272, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu): ReLU(inplace)
+      (conv): Conv2d(272, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+      (drop): Dropout2d(p=0.2)
+    )
+  )
+)
+
+--------------------------------------------------
+convolutional layer
+in_channels = 288
+out_channels = 12 
